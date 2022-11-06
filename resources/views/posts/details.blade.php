@@ -26,8 +26,37 @@
                     </div>
                 </div>
 
-            </div>
 
+
+            </div>
+            <h2 class="text-center"> publish Comment</h2>
+            <form method="post" action="/post/{{ $post->id }}/comment">
+                @csrf()
+                <div class="card mb-4 rounded-3 ">
+
+                    <div class="card-body">
+                        <textarea type="text" class="form-control" placeholder="your comment" name="body"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">publish comment
+                </div>
+
+            </form>
+            @include('layouts.errors')
+            <hr>
+            <div class="card mb-4 rounded-3">
+                <h2 class="text-center"> Comments</h2>
+                <ul class="group-list">
+                    @foreach ($post->comments as $comment)
+                        <li class="group-item-list">
+
+                            {{ $comment->created_at->diffForHumans() }}:{{ $comment->body }}
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
         </div>
 
 

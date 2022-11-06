@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/',[PostController::class,'index'])->name('index');
 Route::get('/post/{id}',[PostController::class,'details'])->name('post.details');
 Route::get('/create',[PostController::class,'create'])->name('post.create');
 Route::post('/store',[PostController::class,'store'])->name('post.store');
+//Comment Controller
+Route::post('/post/{id}/comment',[CommentController::class,'create'])->name('comment.create');
