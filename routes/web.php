@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,9 @@ Route::get('/post/{id}',[PostController::class,'details'])->name('post.details')
 Route::get('/create',[PostController::class,'create'])->name('post.create');
 Route::post('/store',[PostController::class,'store'])->name('post.store');
 //Comment Controller
-Route::post('/post/{id}/comment',[CommentController::class,'create'])->name('comment.create');
+Route::post('/post/{id}/comment',[CommentController::class,'store'])->name('comment.store');
+Route::get('/register',[RegisterController::class,'register'])->name('register');
+Route::post('/register',[RegisterController::class,'customregister'])->name('register-user');
+Route::get('/login',[RegisterController::class,'login'])->name('login');
+Route::post('/login',[RegisterController::class,'customlogin'])->name('login-user');
+

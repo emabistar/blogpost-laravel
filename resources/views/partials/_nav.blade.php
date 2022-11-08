@@ -16,7 +16,14 @@
             <a class="me-3 py-2 text-dark text-decoration-none" href="#">About</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contact</a>
             <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
+
         </nav>
+        <div class="ml-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="">Login</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="">Register</a>
+            <a class="me-3 py-2 text-dark text-decoration-none">Logout</a>
+        </div>
+
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
